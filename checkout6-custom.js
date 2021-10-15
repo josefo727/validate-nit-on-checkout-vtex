@@ -38,7 +38,7 @@ const disabledContinue = (disabled, length = true, validated = false) => {
     if (length) {
         showHelperText('El Nit debe contener 10 dígitos.', 'red');
     } else if (!validated) {
-        showHelperText('Debe ingresar un nit válido.', 'red');
+        showHelperText('Debe ingresar un Nit válido.', 'red');
     } else {
         showHelperText('Ha ingresado un Nit válido', 'blue');
     }
@@ -84,7 +84,7 @@ const calculateVerificationDigit = nit => {
     nit = nit.replace ( /-/g,  "" );
 
     if  ( isNaN ( nit ) )  {
-        disabledContinue(true);
+        disabledContinue(true, false, false);
         return -1;
     }
 
