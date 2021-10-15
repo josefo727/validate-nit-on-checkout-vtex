@@ -34,6 +34,7 @@ const processValidation = () => {
 
 const disabledContinue = (disabled, length = true, validated = false) => {
     document.querySelector('#go-to-shipping').disabled = disabled;
+    document.querySelector('#go-to-payment').disabled = disabled;
     if (length) {
         showHelperText('El Nit debe contener 10 dígitos.', 'red');
     } else if (!validated) {
